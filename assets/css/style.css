@@ -1,0 +1,474 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Nunito+Sans:wght@200;300;400;700&family=Nunito:wght@200;300;400;500;600;700;900&family=Open+Sans:wght@300;400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Raleway:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:wght@300;400;700&display=swap');
+/* 
+font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+:root{
+  /* -------------- COLORS ----------------- */
+  --background-color-white:#fff;
+  --background-color-gray:#ccc;
+  --background-color-black:#000;
+
+  --text-color-white:#fff;
+  --text-color-gray:#ccc;
+  --text-color-black:#000;
+
+  --click-me-background-color:#f4fb24;
+  --about-background-color:#4d4d4dc3;
+
+  /* ------------FONTS SIZE------------ */
+  --font-size-big:2rem;
+  --font-size-medium:1.5rem;
+  --font-size-normal:1rem;
+  --font-size-Extra-small:.5rem;
+
+  /* ---------- FONTS STYLE ------------- */
+  --font-poppins:     'Poppins', sans-serif;
+  --font-montserrat:  'Montserrat', sans-serif;
+  --font-nunito:      'Nunito', sans-serif;
+  --font-nunito-sans: 'Nunito Sans', sans-serif;
+  --font-ubuntu:       'Ubuntu', sans-serif;
+  --font-roboto:       'Roboto', sans-serif;
+  --font-raleway:      'Raleway', sans-serif;
+  --font-open-sans:    'Open Sans', sans-serif;
+
+  /* ------------- MARGIN AND PADDING ------------- */
+  --margin-big:1.5rem;
+  --margin-normal:1rem;
+  --margin-small:.5rem;
+  --margin-Extra-small:.2rem;
+
+  --padding-extra-big:5rem;
+  --padding-big:1.5rem;
+  --padding-normal:1rem;
+  --padding-small:.5rem;
+  --padding-Extra-small:.2rem;
+
+  /*---------------- BORDER ----------------- */
+  --border-black-big : 2.5px solid #000000;
+  --border-black-normal : 1.5px solid #000000;
+  --border-black-small : 1px solid #000000;
+
+  --border-gray-big : 2.5px solid #ccc;
+  --border-gray-normal : 1.5px solid #ccc;
+  --border-gray-small : 1px solid #ccc;
+
+  --gap-big:1.5rem;
+  --gap-normal:1rem;
+  --gap-small:1rem;
+
+}
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 99%;
+  margin: auto;
+}
+
+a,li,ul {
+  all: unset;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* -------------- REUSABLE CLASS ----------- */
+.right-none{
+  border: var(--border-black-big);
+  border-right: none;
+}
+.left-none{
+  border: var(--border-black-big);
+  border-left: none;
+}
+
+.border-left-none{
+  border-left: none;
+}
+
+.right-border{
+  border-right: var(--border-black-big);
+}
+
+.left-border{
+  border-left: var(--border-black-big);
+}
+
+.border-top{
+  border-top: var(--border-black-big);
+}
+
+.border-right-bottom{
+  border-right: var(--border-black-big);
+  border-bottom: var(--border-black-big);
+}
+.border-left-top{
+  border-left: var(--border-black-big);
+  border-top: var(--border-black-big);
+}
+.border-left-bottom{
+  border-left: var(--border-black-big);
+  border-bottom: var(--border-black-big);
+}
+
+.border-top-none{
+  border-top: none;
+}
+
+.border-left-bottom{
+  border-left: var(--border-black-big);
+  border-bottom: var(--border-black-big);
+}
+
+section{
+  padding: var(--padding-normal);
+}
+.devider__div{
+  padding:  var(--padding-small) 0;
+}
+
+.work,
+.service,
+.about,
+.contact{
+  padding: 0;
+}
+
+
+/* ------------- NAVBAR ----------------- */
+
+header{
+  margin-top: var(--margin-small);
+}
+.nav__bar{
+  padding: var(--padding-normal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--padding-small);
+}
+
+.list_items{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.items{
+  margin: 0 var(--margin-Extra-small);
+}
+
+.items a,
+.nav__icon a{
+  font-family: var(--font-poppins);
+  cursor: pointer;
+
+}
+
+
+
+
+
+/*=============== HOME SECTION ===============*/
+.container{
+  display: grid;
+  /* grid-template-columns: repeat(2,1fr); */
+  gap: var(--gap-small);
+}
+
+.description{
+ font-family: var(--font-montserrat);
+ font-size: var(--font-size-big);
+ font-weight: 600;
+}
+
+.home__icon{
+  width: 150px;
+  height: 150px;
+  grid-area: left; 
+}
+
+.arrow__down{
+  place-content: end;
+}
+
+
+/* ------------- CLICK ME SECTION ------------- */
+.click_me{
+  height: 400px;
+  background-color: var(--click-me-background-color);
+  position: relative;
+}
+
+.click_container{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.play_icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+}
+
+.play_icon i{
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/*--------------------- WORK ------------------------- */
+
+
+.card{
+  display: grid;
+  grid-template-columns: 1fr 4fr 5fr 1fr;
+  gap: var(--gap-small);
+  padding: var(--padding-small);
+}
+
+
+.id__text{
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  font-family: var(--font-poppins);
+}
+
+
+.description__text{
+  font-family:var(--font-poppins);
+  font-weight: 600;
+  box-shadow: 0 2px var(--background-color-black);
+  text-transform: uppercase;
+}
+
+
+.work_first_text{
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-big);
+  font-weight: 600;
+
+}
+
+
+.work__image-img{
+  filter: grayscale(100%); 
+  padding: 0; 
+  transition: 0.3s;
+}
+.work__image-img:hover{
+  filter: grayscale(0%); 
+  cursor: pointer;
+}
+
+
+/* ---------------- SERVICE ---------------------- */
+
+.service__container{
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.service__card {
+  display: grid;
+  grid-template-columns: .5fr 5fr 0;
+}
+
+.other_service_card{
+  display: inline-block;
+  font-family: var(--font-poppins);
+  text-transform: uppercase;
+  padding-bottom: var(--padding-extra-big);
+  padding-left: var(--padding-big);
+  padding-top: var(--padding-normal);
+  font-weight: 500;
+}
+
+
+
+.service__image{
+  width: 100px;
+  height: 100px;
+}
+
+.service__icon{
+  padding: var(--padding-small);
+}
+
+.service__desctiption{
+  height: 100px;
+}
+
+.service_des_text{
+  font-family: var(--font-montserrat);
+  font-size: 5rem;
+  font-weight: 900;
+}
+/*=============== ABOUT US ===============*/
+
+.about__container{
+  background-color: var(--about-background-color);
+  padding-bottom: var(--padding-extra-big);
+}
+
+.about__card{
+  display: grid;
+  grid-template-columns: 2fr 5fr ;
+  padding: var(--padding-big) var(--padding-normal) var(--padding-extra-big) var(--padding-normal);
+}
+
+.about__text{
+  text-transform: uppercase;
+  font-family: var(--font-poppins);
+  box-shadow: 0 2px #000;
+}
+
+.about__des_text{
+  font-family: var(--font-montserrat);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.link{
+  padding-top: var(--margin-normal);
+  display: flex;
+  justify-content: center;
+  padding-bottom: var(--padding-extra-big);
+  font-family: var(--font-poppins);
+ 
+}
+
+.link a{
+  box-shadow: 0 2px #000,
+              0 2px #000;
+              cursor: pointer;
+}
+
+
+/*=============== CONTACT ===============*/
+
+
+
+.contact__card_two{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.conatact__text{
+  font-family: var(--font-montserrat);
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+
+.contact__container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+
+.contact__text{
+  background-color: var(--click-me-background-color);
+}
+
+.contact__info{
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.right_side_content{
+  margin-top: var(--margin-small);
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+}
+
+.top__content{
+ display: grid;
+ grid-template-rows: repeat(4,1fr);
+}
+.bottom__content{
+ display: grid;
+ grid-template-rows: repeat(4,1fr);
+}
+
+.info{
+  font-family: var(--font-nunito);
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+
+}
+
+.info a{
+  box-shadow: 0 2px #000,
+              0 2px #000;
+}
+
+/*=============== FOOTER ===============*/
+footer{
+  padding-bottom: var(--padding-normal);
+}
+.footer__container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.footer__text{
+  font-family: var(--font-raleway);
+  font-size: var(--font-size-normal);
+  font-weight: 700;
+  padding: var(--padding-normal);
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+@media screen and (max-width:320px) {
+  .nav__bar{
+    display: grid;
+    grid-auto-rows: repeat(2,1fr);
+    place-items: center;
+  }
+ 
+}
+
+
+/* For medium devices */
+
+
+/* For large devices */
